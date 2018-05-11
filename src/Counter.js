@@ -29,7 +29,13 @@ const mapStateToProps = (state) => {
   };
 }
 // Then replace this:
+const mapDispatchToProps = (dispatch) => {
+  return {
+    increment: () => dispatch(increment()),
+    decrement: () => dispatch(decrement())
+  }
+}
 // export default Counter;
 
 // With this:
-export default connect(mapStateToProps, {increment,decrement})(Counter);
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);

@@ -1,6 +1,9 @@
 import React from 'react';
-import initialState from './initialState';
 import * as actions from './actions';
+
+const initialState = {
+  count:0
+}; 
 
 function reducer(state = initialState, action){
     console.log(action);
